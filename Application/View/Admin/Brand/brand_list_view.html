@@ -1,0 +1,19 @@
+<table border="1px" width="50%">
+    <tr>
+        <th>ID</th>
+        <th>品牌名称</th>
+        <th>品牌简介</th>
+        <th>操作</th>
+    </tr>
+    <?php  foreach($rows as $row):  ?>
+    <tr>
+        <td><?php echo $row['id'] ?></td>
+        <td><?php echo $row['name'] ?></td>
+        <td><?php echo $row['intro'] ?></td>
+        <td><a href="remove.php?id=<?php echo $row['id'] ?>">删除</a>
+            <a href="index.php?c=Brand&a=edit&id=<?php echo $row['id'] ?>">编辑</a> </td>
+    </tr>
+    <?php  endForeach; ?>
+
+    <?php echo $pageToolHtml; ?>
+</table>
